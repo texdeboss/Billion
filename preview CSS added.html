@@ -8,6 +8,7 @@
     <title>Billion CV</title>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="CV.js"></script>
 </head>
 
 <body>
@@ -112,6 +113,39 @@
     </section>
 
     <hr>
+    <div id="footer">
+        <p>For more enquires.. </p>
+        <button class="open-button" onclick="openForm()">CONTACT ME</button>
+    </div>
+
+    <div class="form-popup" id="myForm">
+        <form class="form-container" method="POST">
+            <h2>Contact Form</h2>
+
+            <label for="title">Title</label>
+            <select id="title" name="title">
+                    <option value="title">title</option>
+              <option value="mr.">Mr.</option>
+              <option value="mrs.">Mrs.</option>
+              <option value="ms.">Ms.</option>
+            </select>
+            <label for="fname">Firstname</label>
+            <input type="text" id="name" name="Firstname" placeholder="Your firstname.." required>
+
+            <label for="lname">Lastname</label>
+            <input type="text" id="name" name="Lastname" placeholder="Your lastname.." required>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="Email" placeholder="Your email.." required>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="leave a message..." style="height:120px"></textarea>
+
+            <button type="submit" class="btn" onclick="submit()">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+        </form>
+    </div>
 </body>
 
 </html>
